@@ -4,7 +4,7 @@
 int main(void)
 {
          pid_t pid;
-	 printf("before fork i was one\n");
+	 printf("I'm the Parent\n");
 
          fork();
 
@@ -12,9 +12,16 @@ int main(void)
 	 {
 		 perror("unsuccessful \n");
 		 return 1;
-	 }
+	 } 
 
-	 printf("after fork 1 become two\n");
+	 if (pid == 0)
+	 {
+	    sleep(10);
+
+	 printf("I'm the child\n");
+	 }
+	 else 
+		 printf("I am the parent\n");
 
 	 return 0;
 
