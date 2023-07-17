@@ -4,9 +4,11 @@
 int main(void)
 {
          pid_t pid;
-	 printf("I'm the Parent\n");
+	 pid_t ppid;
 
-         fork();
+	
+
+         pid = fork();
 
 	 if (pid == -1)
 	 {
@@ -20,8 +22,10 @@ int main(void)
 
 	 printf("I'm the child\n");
 	 }
-	 else 
-		 printf("I am the parent\n");
+	 else{
+		ppid= getpid(); 
+		 printf("parent pid is %u\n", ppid);
+	 }
 
 	 return 0;
 
