@@ -21,6 +21,7 @@ int main(void)
 
        else
        {
+       sleep(10);	       
        printf ("parent process\n");
        }
 
