@@ -3,7 +3,7 @@
 int main(void)
 {
 	size_t n = 10;
-	char *buf =malloc(sizeof(char) *n);
+	char *buf = NULL;
 
 	printf("enter Name");
 	getline(&buf, &n, stdin);
