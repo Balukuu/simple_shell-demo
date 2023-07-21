@@ -24,8 +24,9 @@ int main(void)
 	else 
 	{
 		wait(NULL);
+		sleep(10)
 
-	        printf("done execve\n");
+	        printf("Done with execve\n");
 	}
 
          return 0;
